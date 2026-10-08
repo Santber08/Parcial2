@@ -1,0 +1,499 @@
+/* =====================================================
+   ARTE Y PINTURA - Landing page
+   Colores: negro, amarillo y blanco
+   Tipografías: Helvetica (títulos) y Arial (textos)
+   ===================================================== */
+
+/* ---------- Variables de color ---------- */
+:root {
+    --color-principal: #111111;       /* negro */
+    --color-secundario: #FFC107;      /* amarillo */
+    --color-complementario: #ffffff;  /* blanco */
+    --color-fondo: #ffffff;           /* fondo blanco */
+    --color-texto: #222222;           /* texto oscuro */
+    --color-gris: #f2f2f2;            /* gris claro para separar secciones */
+}
+
+/* ---------- Estilos generales ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+}
+
+h1, h2, h3 {
+    font-family: Helvetica, Arial, sans-serif;
+    color: var(--color-principal);
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Botón principal, se usa en varias secciones */
+.boton {
+    display: inline-block;
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+    font-weight: bold;
+    padding: 12px 28px;
+    border: 2px solid var(--color-principal);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.boton:hover {
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+}
+
+/* ---------- Encabezado ---------- */
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: var(--color-principal);
+}
+
+.logo {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--color-complementario);
+}
+
+.logo span {
+    color: var(--color-secundario);
+}
+
+/* ---------- Menú ---------- */
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    color: var(--color-complementario);
+    font-weight: bold;
+    padding: 6px 0;
+    border-bottom: 3px solid transparent;
+}
+
+.menu a:hover {
+    color: var(--color-secundario);
+    border-bottom: 3px solid var(--color-secundario);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 40px;
+    background-color: var(--color-secundario);
+}
+
+.hero-texto {
+    flex: 1;
+}
+
+.hero-texto h1 {
+    font-size: 52px;
+    margin-bottom: 5px;
+}
+
+.eslogan {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.hero-texto p {
+    font-size: 18px;
+    max-width: 500px;
+}
+
+/* En el hero el botón es negro para que se vea sobre el amarillo */
+.hero .boton {
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+}
+
+.hero .boton:hover {
+    background-color: var(--color-complementario);
+    color: var(--color-principal);
+}
+
+.hero-imagen {
+    flex: 1;
+}
+
+.hero-imagen img {
+    display: block;
+    width: 100%;
+    border: 4px solid var(--color-principal);
+    border-radius: 10px;
+    box-shadow: 8px 8px 0 var(--color-principal);
+}
+
+/* ---------- Sección Nosotros ---------- */
+.nosotros {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.nosotros-imagen {
+    flex: 1;
+}
+
+.nosotros-imagen img {
+    display: block;
+    border-radius: 10px;
+}
+
+.nosotros-texto {
+    flex: 1;
+}
+
+.nosotros-texto h2 {
+    text-align: left;
+}
+
+.nosotros-texto h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    border-left: 5px solid var(--color-secundario);
+}
+
+.nosotros-texto p {
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+/* ---------- Sección de productos (tarjetas) ---------- */
+.productos {
+    padding: 60px 40px;
+    background-color: var(--color-gris);
+}
+
+.productos-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.producto {
+    flex: 1 1 300px;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-complementario);
+    padding: 20px;
+    border-radius: 10px;
+    border-top: 6px solid var(--color-secundario);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.producto h3 {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.producto p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.producto .info {
+    font-weight: bold;
+    margin-top: auto;   /* Empuja el precio y el botón hacia abajo de la tarjeta */
+}
+
+.producto .boton {
+    text-align: center;
+}
+
+.producto:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+/* ---------- Beneficios / servicios principales ---------- */
+.servicios {
+    padding: 60px 40px;
+    background-color: var(--color-principal);
+}
+
+.servicios h2 {
+    color: var(--color-secundario);
+}
+
+.servicios-contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.servicio {
+    flex: 1;
+    text-align: center;
+    padding: 25px;
+    color: var(--color-complementario);
+    border: 2px solid var(--color-secundario);
+    border-radius: 10px;
+}
+
+.servicio h3 {
+    color: var(--color-secundario);
+    font-size: 22px;
+}
+
+.servicio p {
+    margin: 0;
+}
+
+.servicio .icono {
+    font-size: 44px;
+    line-height: 1;
+    margin-bottom: 10px;
+    color: var(--color-secundario);
+}
+
+.servicio:hover {
+    background-color: var(--color-secundario);
+}
+
+.servicio:hover h3,
+.servicio:hover .icono,
+.servicio:hover p {
+    color: var(--color-principal);
+}
+
+/* ---------- Tabla ---------- */
+.tabla-seccion {
+    padding: 60px 40px;
+}
+
+.tabla-contenedor {
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow-x: auto;   /* En celulares la tabla se desliza si no cabe */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    text-align: left;
+    padding: 14px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+td {
+    padding: 14px;
+    border-bottom: 1px solid #cccccc;
+}
+
+tr:hover td {
+    background-color: #fff3c4;
+}
+
+/* ---------- Galería ---------- */
+.galeria {
+    padding: 60px 40px;
+    background-color: var(--color-gris);
+}
+
+.galeria-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.galeria-contenedor img {
+    flex: 1 1 300px;
+    max-width: 340px;
+    border-radius: 10px;
+    border: 3px solid var(--color-principal);
+}
+
+.galeria-contenedor img:hover {
+    border-color: var(--color-secundario);
+}
+
+/* ---------- Formulario de contacto ---------- */
+.contacto {
+    padding: 60px 40px;
+}
+
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--color-gris);
+    border-left: 8px solid var(--color-secundario);
+    border-radius: 10px;
+}
+
+.contacto label {
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.contacto input,
+.contacto select,
+.contacto textarea {
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    border: 2px solid #999999;
+    border-radius: 6px;
+}
+
+.contacto input:focus,
+.contacto select:focus,
+.contacto textarea:focus {
+    border-color: var(--color-principal);
+    outline: 3px solid var(--color-secundario);
+}
+
+.contacto .boton {
+    margin-top: 25px;
+}
+
+/* ---------- Pie de página ---------- */
+.pie-pagina {
+    background-color: var(--color-principal);
+    color: var(--color-complementario);
+    padding: 40px;
+}
+
+.pie-contenedor {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.pie-pagina h3 {
+    color: var(--color-secundario);
+}
+
+.pie-pagina p {
+    margin: 4px 0;
+}
+
+.derechos {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #555555;
+}
+
+/* =====================================================
+   DISEÑO RESPONSIVE - Tablets y celulares
+   ===================================================== */
+@media (max-width: 768px) {
+
+    /* Encabezado y menú en vertical */
+    .encabezado {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    /* Hero, de dos columnas a una */
+    .hero {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .hero-texto h1 {
+        font-size: 38px;
+    }
+
+    .hero-texto p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Nosotros en una columna */
+    .nosotros {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    /* Menos espacio a los lados en todas las secciones */
+    .productos,
+    .servicios,
+    .tabla-seccion,
+    .galeria,
+    .contacto {
+        padding: 40px 20px;
+    }
+
+    /* Tarjetas e imágenes ocupan todo el ancho */
+    .producto,
+    .galeria-contenedor img {
+        max-width: 100%;
+    }
+
+    /* Beneficios en una columna */
+    .servicios-contenedor {
+        flex-direction: column;
+    }
+
+    /* Pie de página en una columna */
+    .pie-contenedor {
+        flex-direction: column;
+        text-align: center;
+    }
+}
